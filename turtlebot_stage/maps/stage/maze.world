@@ -17,7 +17,8 @@ define floorplan model
 )
 
 resolution 0.02
-interval_sim 100  # simulation timestep in milliseconds
+interval_sim 25  # simulation timestep in milliseconds;  
+#CMN changed interval_sim from 100.  This improves simulated lidar behavior
 
 window
 (
@@ -42,3 +43,14 @@ turtlebot
   name "turtlebot"
   color "black"
 )
+
+# Definition for an obstacle placed on the map.
+define block model
+(
+  size [0.500 0.500 1.500]
+  gui_nose 0
+)
+
+# throw in an obstacle
+block( pose [ 4.000 4.000 0.000 0.000 ] color "red")
+
