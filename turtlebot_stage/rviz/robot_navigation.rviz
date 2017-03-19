@@ -260,7 +260,7 @@ Visualization Manager:
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 1
-      Min Color: 0; 0; 0
+      Min Color: 255; 255; 0
       Min Intensity: 1
       Name: LaserScan (kinect)
       Position Transformer: XYZ
@@ -272,7 +272,7 @@ Visualization Manager:
       Topic: /scan
       Unreliable: false
       Use Fixed Frame: true
-      Use rainbow: true
+      Use rainbow: false
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -524,7 +524,7 @@ Visualization Manager:
       Axes Radius: 0.00999999978
       Class: rviz/PoseArray
       Color: 0; 192; 0
-      Enabled: true
+      Enabled: false
       Head Length: 0.0700000003
       Head Radius: 0.0299999993
       Name: ParticleCloud
@@ -533,7 +533,7 @@ Visualization Manager:
       Shape: Arrow (Flat)
       Topic: /particlecloud
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -594,11 +594,11 @@ Visualization Manager:
         Value: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Scale: 75.7923126
+      Scale: 102.879242
       Target Frame: map
       Value: TopDownOrtho (rviz)
-      X: 5.31034756
-      Y: 4.87701988
+      X: 7.77928543
+      Y: 5.77461147
     Saved: ~
 Window Geometry:
   Displays:
