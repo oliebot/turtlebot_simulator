@@ -53,4 +53,5 @@ define block model
 
 # throw in an obstacle
 block( pose [ 4.000 4.000 0.000 0.000 ] color "red")
+block( pose [ 8.900 6.583 0.000 0.000 ] color "blue")
 
