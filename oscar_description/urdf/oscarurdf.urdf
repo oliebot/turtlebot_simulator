@@ -1,0 +1,101 @@
+<!-- code base from http://www.ict.griffith.edu.au/~vlad/teaching/robotics.d/READINGS/Learning%20ROS%20for%20Robotics%20Programming%20[eBook].pdf -->
+
+<?xml version="1.0"?>
+<!--First link must have name, unique to file -->
+  <robot name="Oscar">
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <box size=".61 .54 .45"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 .225"/>
+        <material name="white">
+          <color rgba="1 1 1 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="wheel_1">
+      <visual>
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/>
+        </geometry>
+        <origin rpy="1.6 1.5 0" xyz=".15 0.3 0"/>
+          <material name="black">
+            <color rgba="0 0 0 1"/>
+          </material>
+      </visual>
+    </link>
+    <link name="wheel_2">
+      <visual>
+        <geometry>
+          <cylinder length="0.05" radius="0.05"/>
+        </geometry>
+        <origin rpy="1.6 1.5 0" xyz="0.15 -0.3 0"/>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="wheel_3">
+      <visual>
+        <geometry>
+          <cylinder length="0.05" radius="0.026"/>
+        </geometry>
+        <origin rpy="1.6 1.5 0" xyz="-0.1 0.13 0"/>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="wheel_4">
+      <visual>
+        <geometry>
+          <cylinder length="0.05" radius="0.026"/>
+        </geometry>
+        <origin rpy="1.6 1.5 0" xyz="-0.1 -0.13 0"/>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="lidar">
+	<visual>
+	  <geometry>
+		<cylinder radius="0.0381" length="0.0762"/>
+	  </geometry>
+	  <origin xyz="0.089 0 0.45"/>
+	</visual>
+    </link>
+    <link name="vacuum">
+	<visual>
+	  <geometry>
+		<box size=".23 .39 .1"/>
+	  </geometry> 
+	  <origin xyz= "-.420 -.3 .05" />
+	</visual>
+    </link>
+    <joint name="base_to_wheel1" type="fixed">
+      <parent link="base_link"/>
+      <child link="wheel_1"/>
+      <origin xyz="0 0 0"/>
+    </joint>
+    <joint name="base_to_wheel2" type="fixed">
+      <parent link="base_link"/>
+      <child link="wheel_2"/>
+      <origin xyz="0 0 0"/>
+    </joint>
+    <joint name="base_to_wheel3" type="fixed">
+      <parent link="base_link"/>
+      <child link="wheel_3"/>
+      <origin xyz="0 0 0"/>
+    </joint>
+    <joint name="base_to_wheel4" type="fixed">
+      <parent link="base_link"/>
+      <child link="wheel_4"/>
+      <origin xyz="0 0 0"/>
+    </joint>
+    <joint name="base_to_lidar" type="fixed">
+      <parent link="base_link"/>
+      <child link="lidar"/>
+      <origin xyz="0 0 0"/>
+    </joint>
+    <joint name="base_to_vacuum" type="fixed">
+      <parent link="base_link"/>
+      <child link="vacuum"/>
+      <origin xyz="0 .3 0"/>
+    </joint>
+  </robot>

@@ -53,6 +53,8 @@
     <param name="use_gui" value="true"/>
   </node>
 
+  <include file="$(find oscar_description)/urdf/oscarurdf.launch"/>
+
   <!-- Command Velocity multiplexer -->
   <node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>
   <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load yocs_cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager">
